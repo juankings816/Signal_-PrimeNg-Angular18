@@ -9,8 +9,9 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignalEjemplo2Component {
-  nombre = signal('');
-  updateName(nombre: string) {
+  nombre = signal<string>('');
+
+  updateName(nombre : string)  {
     this.nombre.set(nombre);
   }
 }
